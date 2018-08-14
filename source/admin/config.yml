@@ -26,5 +26,10 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Title", name: "title", widget: string}
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - {label: Value name, name: value_name, widget: string}
+              - {label: Value description, name: value_description, widget: string}

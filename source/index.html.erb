@@ -10,3 +10,11 @@ title: Welcome to Middleman
   "https://middlemanapp.com/basics/templating_language/",
   target: "_blank"
 ) %>
+
+<section class="posts">
+  <% blog.articles.each do |article| %>
+    <article class="post">
+      <h1><%= article.title %></h1>
+    </article>
+  <%end%>
+</section>

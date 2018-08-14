@@ -16,6 +16,15 @@ page "/partials/*", layout: false
 page "/admin/*", layout: false
 
 
+activate :blog do |blog|
+  blog.permalink = "posts/{year}/{title}.html"
+  blog.sources = "posts/{year}-{month}-{day}-{title}"
+end
+
+#Use pretty urls
+activate :directory_indexes
+
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 

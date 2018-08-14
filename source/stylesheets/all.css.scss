@@ -1,6 +1,7 @@
 //setup
 @charset 'utf-8';
-
+@import 'bootstrap-sprockets';
+@import 'bootstrap-setup';
 //base
 @import 'base/reset';
 @import 'base/colors';

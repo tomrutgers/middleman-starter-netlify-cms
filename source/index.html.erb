@@ -5,11 +5,16 @@ title: Home - Middleman + Netlify CMS Example
   <h1>Welcome</h1>
 </section>
 
-<section class="posts">
-  <h1>News</h1>
-  <% blog.articles.each do |article| %>
-    <article class="post">
-      <h1><%= article.title %></h1>
-    </article>
-  <%end%>
+<section class="posts-homepage">
+  <div class="container">
+    <h1>News</h1>
+    <% blog.articles.each do |article| %>
+      <div class="row">
+        <article class="post col-xs-12">
+          <h1><%= article.title %></h1>
+        </article>
+      </div>
+    <%end%>
+
+  </div>
 </section>

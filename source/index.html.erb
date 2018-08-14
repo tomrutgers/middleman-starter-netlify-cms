@@ -1,17 +1,12 @@
 ---
-title: Welcome to Middleman
+title: Home - Middleman + Netlify CMS Example
 ---
-<h1>
-  Middleman is Running
-</h1>
-
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+<section class="hero-homepage">
+  <h1>Welcome</h1>
+</section>
 
 <section class="posts">
+  <h1>News</h1>
   <% blog.articles.each do |article| %>
     <article class="post">
       <h1><%= article.title %></h1>

@@ -1,0 +1,15 @@
+.hero-homepage {
+  width: 100%;
+  padding: 20% 0;
+  text-align: center;
+  background-image: url('../images/coffee.jpg');
+  background-size: cover;
+
+  h1 {
+    display: inline-block;
+    padding: 16px;
+    font-size: 48px;
+    color: #fff;
+    background-color: $primary-color;
+  }
+}

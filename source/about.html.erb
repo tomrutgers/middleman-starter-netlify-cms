@@ -2,6 +2,14 @@
   <div class="row">
     <div class="col-xs-12">
       <h1><%= data.pages.about.title%></h1>
+      <ul class="about-values">
+        <%  data.pages.about.usps.each do | value | %>
+          <li class="value">
+            <h2><%=value.name %></h2>
+            <p><%=value.description %></p>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

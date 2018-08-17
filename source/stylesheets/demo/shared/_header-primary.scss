@@ -23,11 +23,16 @@
       margin: 0 15px;
     }
     a {
+      font-size: 18px;
       font-weight: 700;
       color: $text-color;
       &.active, &:hover, &:focus{
         color: $primary-color;
       }
+    }
+    
+    @media screen and (max-width: $screen-xs-max){
+      display: none;
     }
   }
 }

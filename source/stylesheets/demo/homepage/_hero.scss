@@ -25,9 +25,8 @@
       font-size: 32px;
       padding-top: 10%;
     }
-    @media screen and (max-width: 400px){
-      font-size: 32px;
-      padding-top: 5%;
-    }
+  }
+  @media screen and (max-width: 400px){
+    padding-bottom: 50%;
   }
 }

@@ -1,0 +1,16 @@
+# Configure HTTP/2 Server Push
+
+<% sitemap.resources.select { |resource| resource.path =~ /\.(html)/ }.each do |resource| %>
+<%= resource.url %>
+  Link: <<%= sitemap.find_resource_by_path('stylesheets/all.css').url  %>>; rel=preload; as=style
+<%end%>
+
+# Set a long cache expiry on assets with font or image extensions
+<% sitemap.resources.select { |resource| resource.path =~ /\.(css|js|svg|jpg|png)/ }.each do |resource| %>
+<%= resource.url %>
+  <%if resource.path =~ /\.(json|xml)/%>
+    Cache-Control: public, max-age=0
+  <%else%>
+    Cache-Control: public, max-age=31556926
+  <%end%>
+<%end%>

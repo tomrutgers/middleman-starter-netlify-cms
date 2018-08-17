@@ -13,7 +13,11 @@
     @extend %column;
     @extend %col-md-4;
     @extend %col-sm-6;
-    @extend %col-xs-6;
     @extend %product;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $screen-xs-max) {
+      margin-bottom: 15px;
+    }
   }
 }

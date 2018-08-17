@@ -5,7 +5,7 @@
     .row
       //product is structured: ['filename', 'data']
       //sort by newest product
-      - data.products.sort {|a,b| b[1].date <=> a[1].date}.each do | product |
+      - data.products.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | product |
 
         //to get the actual data:
         - product = product[1]

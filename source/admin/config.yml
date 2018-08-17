@@ -22,18 +22,6 @@ collections:
   - name: pages
     label: Pages
     files:
-      - file: data/pages/about.yml
-        label: About
-        name: about
-        fields:
-          - {label: Title, name: title, widget: string}
-          - label: Unique selling points
-            name: usps
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: string}
-
       - file: "data/pages/home.yml"
         label: Homepage
         name: home

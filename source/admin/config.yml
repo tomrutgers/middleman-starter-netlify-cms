@@ -21,8 +21,8 @@ collections:
       - {label: Body, name: body, widget: markdown}
 
   #yaml middleman data example
-  - name: products
-    label: Products
+  - name: product
+    label: Product
     extension: yml
     folder: data/products/
     create: true

@@ -1,9 +1,9 @@
-.header-primary
+header.header-primary
   .logo
     = link_to '/'
       = image_tag 'logo.svg', alt: 'Kaldi'
 
-  .navigation
+  nav.navigation
     ul
       - data.shared.site.navigation.each do | nav_item |
         li

@@ -42,5 +42,5 @@ collections:
             name: hero
             widget: object
             fields:
-              - {label: Title, name: title, widget: title}
+              - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}

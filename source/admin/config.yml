@@ -44,6 +44,9 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}
+          - label: Story
+            name: story
+            widget: markdown
 
   - name: settings
     label: Settings

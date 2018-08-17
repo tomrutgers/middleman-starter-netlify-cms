@@ -14,9 +14,13 @@
     }
   }
 
+  ul {
+    margin: 0;
+  }
+
   .navigation {
     position: absolute;
-    top: 33px;
+    top: 28px;
     right: 15px;
     li {
       display: inline-block;

@@ -1,0 +1,27 @@
+.homepage-story {
+  background: $secondary-color;
+
+  .story-content {
+    @extend %column;
+    @extend %col-sm-8;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    p {
+      margin: 0;
+      font-size: 24px;
+      line-height: 36px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    @media screen and(max-width: $screen-xs-max){
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

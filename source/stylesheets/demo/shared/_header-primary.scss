@@ -1,0 +1,33 @@
+.header-primary {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  z-index: 999;
+
+  .logo {
+    width: 173px;
+    height: 80px;
+    a {
+      display: block;
+      padding: 26px 30px;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    top: 33px;
+    right: 15px;
+    li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    a {
+      font-weight: 700;
+      color: $text-color;
+      &.active, &:hover, &:focus{
+        color: $primary-color;
+      }
+    }
+  }
+}

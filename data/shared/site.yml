@@ -1,0 +1,6 @@
+navigation: 
+  - {label: 'Home', path: '/'}
+  - {label: 'Story', path:  '/story/'}
+  - {label: 'Products', path:  '/products/'}
+  - {label: 'News', path:  '/news/'}
+  - {label: 'Contact', path:  '/contact/'}

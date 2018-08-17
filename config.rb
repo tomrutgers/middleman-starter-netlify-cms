@@ -1,5 +1,6 @@
 #Bootstrap is used to style bits of the demo. Remove it from the config, gemfile and stylesheets to stop using bootstrap
 require 'bootstrap-sass'
+require "uglifier"
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -62,7 +63,16 @@ end
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  # Minify css on build
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript, compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none} )
+
+  # Use Gzip
+  activate :gzip
+
+  #Use asset hashes to use for caching
+  activate :asset_hash
+end

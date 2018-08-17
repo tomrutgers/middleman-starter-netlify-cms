@@ -8,7 +8,7 @@
   .product-image, .product-content {
     background-color: #fff;
   }
-  
+
   .product-content {
     padding: 10px 20px;
   }
@@ -17,15 +17,18 @@
     display: inline-block;
   }
 
+  .price p, h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
   .price {
     float: right;
-    font-weight: 700;
-    color: $primary-color
+    font-size: 24px;
+    color: $primary-color;
   }
 
   h3 {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0;
   }
 }

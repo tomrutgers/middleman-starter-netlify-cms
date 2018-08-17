@@ -3,12 +3,14 @@
     h2
       | Products
     .row
-      - data.products.each do | product |
+      //product is structured: ['filename', 'data']
+      //sort by newest product
+      - data.products.sort {|a,b| b[1].date <=> a[1].date}.each do | product |
 
-        //product is formatted ['filename', 'data']
         //to get the actual data:
         - product = product[1]
 
+        //link to product by converting the title to a slug
         = link_to '/products/' + product.title.parameterize
           .product
             .product-image

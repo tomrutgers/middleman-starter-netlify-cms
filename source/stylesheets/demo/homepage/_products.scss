@@ -1,0 +1,19 @@
+.homepage-products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background-color-light;
+
+  h2 {
+    margin: 0 0 30px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .product {
+    @extend %column;
+    @extend %col-md-4;
+    @extend %col-sm-6;
+    @extend %col-xs-6;
+    @extend %product;
+  }
+}

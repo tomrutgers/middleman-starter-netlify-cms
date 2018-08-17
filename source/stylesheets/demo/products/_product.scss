@@ -1,0 +1,31 @@
+%product {
+  color: $text-color;
+
+  img {
+    @extend %img-responsive;
+  }
+
+  .product-image, .product-content {
+    background-color: #fff;
+  }
+  
+  .product-content {
+    padding: 10px 20px;
+  }
+
+  .title, .price {
+    display: inline-block;
+  }
+
+  .price {
+    float: right;
+    font-weight: 700;
+    color: $primary-color
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+}

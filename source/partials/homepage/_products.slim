@@ -1,18 +1,28 @@
 .homepage-products
   .container
+    h2
+      | Products
     .row
       - data.products.each do | product |
-        .product
-          .product-image
-            = image_tag product.image
-          .product-content
-            .title
-              h2 = product.title
-            .weight
-              p 
-                = product.weight.amount
-                |  
-                = product.weight.unit
 
-            .price
-              = product.price
+        //product is formatted ['filename', 'data']
+        //to get the actual data:
+        - product = product[1]
+
+        = link_to '/products/' + product.title.parameterize
+          .product
+            .product-image
+              = image_tag product.image
+            .product-content
+              .title
+                h3 = product.title
+              .price
+                p 
+                  = product.price.currency || '€'
+                  | 
+                  = product.price.amount
+              .weight
+                p 
+                  = product.weight.amount
+                  |  
+                  = product.weight.unit  || 'kg'

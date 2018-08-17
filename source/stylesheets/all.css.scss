@@ -2,10 +2,14 @@
 @charset 'utf-8';
 @import 'bootstrap-sprockets';
 @import 'bootstrap-setup';
-//base
-@import 'base/reset';
-@import 'base/colors';
-@import 'base/typography';
-@import 'base/placeholders';
 
-@import 'demo/homepage';
+@import 'demo/base/colors';
+@import 'demo/base/typography';
+@import 'demo/base/mixins';
+@import 'demo/base/grid';
+@import 'demo/base/placeholders';
+
+@import 'demo/shared/header-primary';
+@import 'demo/shared/main-content';
+
+@import 'demo/homepage/hero';

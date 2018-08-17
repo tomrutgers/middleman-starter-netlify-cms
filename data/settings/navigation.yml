@@ -1,4 +1,4 @@
-navigation: 
+nav_items: 
   - {label: 'Home', path: '#'}
   - {label: 'Story', path: '#'}
   - {label: 'Products', path: '#'}

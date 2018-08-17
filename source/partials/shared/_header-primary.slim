@@ -5,6 +5,6 @@ header.header-primary
 
   nav.navigation
     ul
-      - data.shared.settings.navigation.each do | nav_item |
+      - data.settings.navigation.nav_items.each do | nav_item |
         li
           = link_to nav_item.label, nav_item.path

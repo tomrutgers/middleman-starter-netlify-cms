@@ -52,8 +52,8 @@ collections:
         label: Navigation
         name: navigation
         fields:
-          - label: Navigation item
-            name: nav_item
+          - label: Navigation items
+            name: nav_items
             widget: list
             fields:
               - {label: Label, name: label, widget: string}

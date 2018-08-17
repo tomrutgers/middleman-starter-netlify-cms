@@ -23,6 +23,7 @@ collections:
   #yaml middleman data example
   - name: product
     label: Product
+    format: yml
     extension: yml
     folder: data/products/
     create: true
@@ -39,7 +40,13 @@ collections:
           - {label: Amount, name: amount, widget: number}
           - {label: Unit, name: unit, widget: select, options: ['kg', 'pound', 'stone'], default: 'kg'}
 
-      - {label: Price, name: price, widget: number}
+      - label: Price
+        name: price
+        widget: object
+        fields:
+          - {label: Amount, name: amount, widget: number}
+          - {label: Currency, name: currency, widget: select, options: ['€', '$', '£'], default: '€'}
+
       - {label: Body, name: body, widget: markdown}
 
   - name: pages

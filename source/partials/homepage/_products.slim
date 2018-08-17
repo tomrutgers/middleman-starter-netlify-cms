@@ -1,0 +1,18 @@
+.homepage-products
+  .container
+    .row
+      - data.products.each do | product |
+        .product
+          .product-image
+            = image_tag product.image
+          .product-content
+            .title
+              h2 = product.title
+            .weight
+              p 
+                = product.weight.amount
+                |  
+                = product.weight.unit
+
+            .price
+              = product.price

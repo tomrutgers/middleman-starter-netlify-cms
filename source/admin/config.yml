@@ -23,6 +23,7 @@ collections:
   #yaml middleman data example
   - name: products
     label: Products
+    extension: yml
     folder: data/products/
     create: true
     slug: '{{title}}'

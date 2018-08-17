@@ -5,6 +5,7 @@ weight:
   amount: '0.5'
 price:
   amount: '18'
+  currency: €
 body: >-
   The Coffea liberica tree grows up to 20 metres in height, producing larger
   fruits than those found on Coffea arabica trees. This coffee was brought to

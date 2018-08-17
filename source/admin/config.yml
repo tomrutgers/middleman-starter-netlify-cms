@@ -44,3 +44,14 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}
+
+  - name: settings
+    label: Settings
+    files:
+      - file: data/shared/settings.yml
+        label: Navigation
+        name: navigation
+        fields:
+          - {label: Label, name: label, widget: string}
+          - {label: Path, name: path, widget: string}
+

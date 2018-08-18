@@ -41,6 +41,8 @@ collections:
   - name: blog
     label: Blog
     folder: source/posts/
+    extension: .html.md
+    format: .html.md
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
     fields:

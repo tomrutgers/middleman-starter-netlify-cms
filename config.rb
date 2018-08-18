@@ -31,7 +31,7 @@ ignore '/product.html'
 ignore '/product/index.html'
 
 activate :blog do |blog|
-  blog.permalink = "news/{title}.html"
+  blog.permalink = "news/{year}/{title}.html"
 
   blog.sources = "posts/{title}.html"
 end

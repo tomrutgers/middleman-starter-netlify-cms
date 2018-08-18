@@ -44,7 +44,7 @@ collections:
     extension: .html.md
     format: frontmatter
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    slug: '{{title}}'
     fields:
       - {label: Title, name: title, widget: string, required: true}
       - {label: Publish Date, name: date, widget: datetime}

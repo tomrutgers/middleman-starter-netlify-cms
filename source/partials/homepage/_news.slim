@@ -1,0 +1,21 @@
+section.homepage-news
+  .container
+    h2
+      | News
+    .news-items
+      - blog.articles.first(2).each do | post |
+        .news-item
+          .row
+            .image
+              - if post.data.image
+                = link_to post
+                  = image_tag post.data.image
+                  .date
+                    - date = Date.parse post.data.date
+                    span = date.strftime("%d-%m-%Y")
+            .content
+              .wrapper
+                = link_to post
+                  h3 = post.data.title
+                p = post.data.description
+                = link_to 'Read the story', post, class: 'cta'

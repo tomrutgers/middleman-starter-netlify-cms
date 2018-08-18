@@ -17,9 +17,9 @@ collections:
     create: true
     slug: '{{title}}'
     fields:
-      - {label: Title, name: title, widget: string}
+      - {label: Title, name: title, widget: string, required: true}
       - {label: Publish Date, name: date, widget: datetime}
-      - {label: Image, name: image, widget: image}
+      - {label: Image, name: image, widget: image, required: true}
 
       - label: Weight
         name: weight
@@ -44,9 +44,9 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
     fields:
-      - {label: Title, name: title, widget: string}
+      - {label: Title, name: title, widget: string, required: true}
       - {label: Publish Date, name: date, widget: datetime}
-      - {label: Description, name: description, widget: text}
+      - {label: Description, name: description, widget: string}
       - {label: Image, name: image, widget: image}
       - {label: Body, name: body, widget: markdown}
 

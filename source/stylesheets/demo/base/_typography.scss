@@ -9,3 +9,44 @@ p {
   font-size: 18px;
   line-height: 28px;
 }
+
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: $screen-md-max){
+  h1 {
+    font-size: 48px;
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: $screen-sm-max){
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: $screen-xs-max){
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+

@@ -5,6 +5,7 @@
   padding-bottom: 42.1875%;
   background-size: cover;
   background-position: center right;
+  background-color: rgba(214,227,227, 1);
   .caption {
     @extend %container;
   }
@@ -14,15 +15,11 @@
     @extend %col-xs-8;
     margin: 0;
     padding-top: 20%;
-    font-size: 64px;
-    font-weight: 700;
 
     @media screen and (max-width: $screen-md-max){
-      font-size: 48px;
       padding-top: 15%;
     }
     @media screen and (max-width: $screen-xs-max){
-      font-size: 32px;
       padding-top: 10%;
     }
   }

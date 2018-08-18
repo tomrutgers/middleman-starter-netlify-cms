@@ -5,18 +5,20 @@
 
   h2 {
     margin: 0 0 30px;
-    font-size: 32px;
-    font-weight: 700;
   }
 
   .product {
     @extend %column;
     @extend %col-sm-4;
     @extend %product;
-    margin-bottom: 30px;
+  }
 
-    @media screen and (max-width: $screen-xs-max) {
-      margin-bottom: 15px;
+  @media screen and (max-width: $screen-xs-max) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    h2 {
+      margin: 0 0 15px;
     }
   }
 }

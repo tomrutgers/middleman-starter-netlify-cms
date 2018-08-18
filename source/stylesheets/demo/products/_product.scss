@@ -1,5 +1,19 @@
 %product {
   color: $text-color;
+  margin-bottom: 30px;
+
+  &:hover, &:focus {
+    .product-content {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.10);
+    }
+  }
+
+  .product-content {
+    padding: 10px 30px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 400ms ease-in-out;
+  }
+
 
   img {
     @extend %img-responsive;
@@ -9,15 +23,12 @@
     background-color: #fff;
   }
 
-  .product-content {
-    padding: 10px 30px;
-  }
 
   .title, .price {
     display: inline-block;
   }
 
-  .price p, h3 {
+  .price p {
     font-size: 24px;
     font-weight: 700;
   }
@@ -30,5 +41,9 @@
 
   h3 {
     margin: 0;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-bottom: 15px;
   }
 }

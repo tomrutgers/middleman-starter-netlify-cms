@@ -3,13 +3,15 @@
   margin-bottom: 30px;
 
   &:hover, &:focus {
-    .product-content {
+    a {
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.10);
+      text-decoration: none;
     }
   }
 
-  .product-content {
-    padding: 10px 30px;
+  a {
+    display: block;
+    color: $text-color;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     transition: box-shadow 400ms ease-in-out;
   }
@@ -23,6 +25,9 @@
     background-color: #fff;
   }
 
+  .product-content {
+    padding: 10px 30px;
+  }
 
   .title, .price {
     display: inline-block;

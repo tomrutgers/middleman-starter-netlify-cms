@@ -11,8 +11,8 @@ section.homepage-products
         - product = product[1]
 
         //link to product by converting the title to a slug
-        = link_to '/products/' + product.title.parameterize
-          .product
+        .product
+          = link_to '/products/' + product.title.parameterize
             .product-image
               = image_tag product.image
             .product-content

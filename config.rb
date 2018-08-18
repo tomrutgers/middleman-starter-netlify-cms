@@ -43,12 +43,18 @@ end
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 data.products.each do |product|
-  proxy "/products/#{product[1].title.parameterize}.html", "/product.html", locals: {product: product[1]}, layout: 'layout', :ignore => true
+  proxy "/products/#{product[1][:title].parameterize}/index.html", "product.html", 
+  locals: {product: product[1]}, 
+  layout: 'layout',
+  ignore: true
 end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
+
+# pretty urls
+activate :directory_indexes
 
 helpers do
   def background_image(image)

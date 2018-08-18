@@ -26,10 +26,6 @@ page '/*.txt', layout: false
 page "/partials/*", layout: false
 page "/admin/*", layout: false
 
-
-ignore '/product.html'
-ignore '/product/index.html'
-
 activate :blog do |blog|
   blog.permalink = "news/{year}/{title}.html"
 
@@ -43,7 +39,7 @@ end
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 data.products.each do |product|
-  proxy "/products/#{product[1][:title].parameterize}/index.html", "product.html", 
+  proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html", 
   locals: {product: product[1]}, 
   layout: 'layout',
   ignore: true

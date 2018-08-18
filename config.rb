@@ -25,12 +25,14 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/partials/*", layout: false
 page "/admin/*", layout: false
-page "/products/*", layout: 'layout'
 
+
+ignore '/product.html'
+ignore '/product/index.html'
 
 activate :blog do |blog|
   blog.permalink = "posts/{title}.html"
-  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.sources = "posts/{title}.html"
 end
 
 #Use pretty urls
@@ -43,8 +45,7 @@ activate :directory_indexes
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 data.products.each do |product|
-  proxy "/products/#{product[1].title.parameterize}/", "/product.html", locals: {product: product[1]}, ignore: true
-
+  proxy "/products/#{product[1].title.parameterize}", "/product.html", locals: {product: product[1]}, layout: 'layout', :ignore => true
 end
 
 # Helpers
@@ -82,4 +83,5 @@ configure :build do
 
   #Use asset hashes to use for caching
   activate :asset_hash
+
 end

@@ -1,6 +1,6 @@
 //link to product by converting the title to a slug
 .product
-  = link_to '/products/' + product.title.parameterize + '/'
+  = link_to '/product/' + product.title.parameterize + '/'
     .product-image
       = image_tag product.image
     .product-content

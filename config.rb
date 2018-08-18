@@ -25,6 +25,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/partials/*", layout: false
 page "/admin/*", layout: false
+page "/products/*", layout: 'layout'
 
 
 activate :blog do |blog|
@@ -35,20 +36,16 @@ end
 #Use pretty urls
 activate :directory_indexes
 
-
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+data.products.each do |product|
+  proxy "/products/#{product[1].title.parameterize}/", "/product.html", locals: {product: product[1]}, ignore: true
+
+end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
@@ -65,6 +62,9 @@ helpers do
     link_to(link_text, url, options)
   end
 
+  def markdown(content)
+     Tilt['markdown'].new { content }.render
+  end
 end
 
 # Build-specific configuration

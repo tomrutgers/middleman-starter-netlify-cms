@@ -1,0 +1,16 @@
+.product-detail
+  .image style=background_image(image_path(product.image))
+  .content
+    .meta
+      h1 = product.title
+
+      .weight
+        - weight = product.weight.unit || 'kg'
+        span = product.weight.amount + weight
+
+      .price
+        - currency = product.price.currency || '€' 
+        span = currency + product.price.amount 
+
+    .body
+      = markdown product.body

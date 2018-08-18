@@ -5,7 +5,7 @@
   padding-bottom: 42.1875%;
   background-size: cover;
   background-position: center right;
-  background-color: rgba(214,227,227, 1);
+  background-color: $background-secondary-color;
   .caption {
     @extend %container;
   }

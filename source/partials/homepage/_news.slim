@@ -3,6 +3,7 @@ section.homepage-news
     h2
       | News
     .news-items
+      //get the first two most recent posts
       - blog.articles.first(2).each do | post |
         .news-item
           .row
@@ -10,12 +11,17 @@ section.homepage-news
               - if post.data.image
                 = link_to post
                   = image_tag post.data.image
+
                   .date
-                    - date = Date.parse post.data.date
+                    //make sure the post date is actually a date
+                    - date = Date.parse post.data.date.to_s
                     span = date.strftime("%d-%m-%Y")
+
             .content
               .wrapper
                 = link_to post
                   h3 = post.data.title
+                
                 p = post.data.description
+
                 = link_to 'Read the story', post, class: 'cta'

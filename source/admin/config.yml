@@ -42,7 +42,7 @@ collections:
     label: Blog
     folder: source/posts/
     extension: .html.md
-    format: .html.md
+    format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
     fields:

@@ -8,23 +8,4 @@ section.homepage-products.products
       - data.products.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | product |
 
         //to get the actual data:
-        - product = product[1]
-
-        //link to product by converting the title to a slug
-        .product
-          = link_to '/products/' + product.title.parameterize
-            .product-image
-              = image_tag product.image
-            .product-content
-              .title
-                h3 = product.title
-              .price
-                p 
-                  = product.price.currency || '€'
-                  | 
-                  = product.price.amount
-              .weight
-                p 
-                  = product.weight.amount
-                  |  
-                  = product.weight.unit  || 'kg'
+        = partial 'partials/products/product', locals: {product: product[1]}

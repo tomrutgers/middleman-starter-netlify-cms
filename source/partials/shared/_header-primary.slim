@@ -7,4 +7,4 @@ header.header-primary
     ul
       - data.settings.navigation.nav_items.each do | nav_item |
         li
-          = link_to nav_item.label, nav_item.path
+          = nav_link nav_item.label, nav_item.path

@@ -8,18 +8,6 @@ public_folder: /images/uploads
 #publish_mode: editorial_workflow #optional, enables publishing workflow
 
 collections:
-  #markdown middleman blog example
-  - name: blog
-    label: Blog
-    folder: source/posts/
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Description, name: description, widget: text}
-      - {label: Body, name: body, widget: markdown}
-
   #yaml middleman data example
   - name: product
     label: Product
@@ -47,6 +35,19 @@ collections:
           - {label: Amount, name: amount, widget: number}
           - {label: Currency, name: currency, widget: select, options: ['€', '$', '£'], default: '€'}
 
+      - {label: Body, name: body, widget: markdown}
+
+#markdown middleman blog example
+  - name: blog
+    label: Blog
+    folder: source/posts/
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Description, name: description, widget: text}
+      - {label: Image, name: image, widget: image}
       - {label: Body, name: body, widget: markdown}
 
   - name: pages

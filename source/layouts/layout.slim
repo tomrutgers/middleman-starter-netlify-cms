@@ -10,7 +10,7 @@ html
     title= current_page.data.title || "Middleman"
     
     = stylesheet_link_tag "all"
-    
+
     // Include netlify identity widget for user registration
     script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" 
   body
@@ -19,4 +19,4 @@ html
     main.main-content
       = yield
 
-    = javascript_include_tag 'main'
+    = javascript_include_tag 'main', async: true

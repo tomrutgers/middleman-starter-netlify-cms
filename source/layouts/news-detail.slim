@@ -10,9 +10,9 @@ html
     title= current_page.data.title || "Kaldi - Middleman + Netlify CMS Example"
     
     = stylesheet_link_tag "all"
-
     // Include netlify identity widget for user registration
     script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" 
+
   body
     = partial 'partials/shared/header-primary'
 
@@ -32,3 +32,5 @@ html
           .row.content
 
             = yield
+
+    = javascript_include_tag 'main', async: true

@@ -3,8 +3,13 @@ header.header-primary
     = link_to '/'
       = image_tag 'logo.svg', alt: 'Kaldi'
 
+  a.nav-button href='#'
+    = image_tag 'nav-open.svg', class: 'open'
+    = image_tag 'nav-close.svg', class: 'close'
+
   nav.navigation
     ul
       - data.settings.navigation.nav_items.each do | nav_item |
         li
           = nav_link nav_item.label, nav_item.path
+

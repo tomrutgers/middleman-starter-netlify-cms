@@ -9,7 +9,7 @@ header.header-primary
 
   nav.navigation
     ul
-      - data.settings.site.navigation.each do | nav_item |
+      - data.settings.navigation.nav_items.each do | nav_item |
         li
           = nav_link nav_item.label, nav_item.path
 

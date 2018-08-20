@@ -86,6 +86,6 @@ configure :build do
   activate :gzip
 
   #Use asset hashes to use for caching
-  activate :asset_hash
+  #activate :asset_hash
 
 end

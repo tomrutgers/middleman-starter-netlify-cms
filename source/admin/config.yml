@@ -60,29 +60,28 @@ collections:
   - name: settings
     label: Settings
     files:
-      - file: data/settings/site.yml
-        label: Site settings
-        name: site_settings
+      - file: data/settings/navigation.yml
+        label: Navigation
+        name: navigation
         fields:
           - label: Navigation
-            name: navigation
+            name: nav_items
             widget: list
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
+      - file: data/settings/units.yml
+        label: Units
+        name: units
+        fields:
+          - label: Currency
+            name: currency
+            widget: select
+            options: ['€', '$', '£']
+            default: '€'
 
-          - label: Units
-            name: units
-            widget: object
-            fields:
-              - label: Currency
-                name: currency
-                widget: select
-                options: ['€', '$', '£']
-                default: '€'
-
-              - label: Weight
-                name: weight
-                widget: select
-                options: ['kg', ' st', ' lb']
-                default: 'kg'
+          - label: Weight
+            name: weight
+            widget: select
+            options: ['kg', ' st', ' lb']
+            default: 'kg'

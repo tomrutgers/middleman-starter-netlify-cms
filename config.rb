@@ -16,6 +16,7 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :livereload
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -38,7 +39,9 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
+# proxy product.yml files to product.html 
 data.products.each do |product|
+  # product is an array: [filename, {data}]
   proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html", 
   locals: {product: product[1]}, 
   layout: 'layout',
@@ -53,6 +56,7 @@ end
 activate :directory_indexes
 
 helpers do
+  #helper to set background images with asset hashes in a style attribute
   def background_image(image)
     "background-image: url('" << image_path(image) << "')"
   end

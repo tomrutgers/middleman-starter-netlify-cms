@@ -1,6 +1,8 @@
 # Middleman + Netlify CMS Starter
 
-This repo contains an **[example website](https://middleman-netlify-cms.netlify.com/)** that is built with [Middleman](https://www.middlemanapp.com/), and [Netlify CMS](https://www.netlifycms.org). *Designed and developed by [Tom Rutgers](https://www.tomrutgers.nl/)*
+This repo contains an **[example website](https://middleman-netlify-cms.netlify.com/)** that is built with [Middleman](https://www.middlemanapp.com/), and [Netlify CMS](https://www.netlifycms.org). 
+
+*Designed and developed by [Tom Rutgers](https://www.tomrutgers.nl/)*
 
 ## About the architecture
 

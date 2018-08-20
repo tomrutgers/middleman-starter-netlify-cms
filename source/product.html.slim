@@ -5,11 +5,11 @@
       h1 = product.title
 
       .weight
-        - weight = product.weight.unit || 'kg'
+        - weight = data.settings.units.weight || 'kg'
         span = product.weight.amount + weight
 
       .price
-        - currency = product.price.currency || '€' 
+        - currency = data.settings.units.currency || '€' 
         span = currency + product.price.amount 
 
     .body

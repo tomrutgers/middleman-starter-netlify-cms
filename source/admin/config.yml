@@ -21,20 +21,8 @@ collections:
       - {label: Publish Date, name: date, widget: datetime}
       - {label: Image, name: image, widget: image, required: true}
 
-      - label: Weight
-        name: weight
-        widget: object
-        fields:
-          - {label: Amount, name: amount, widget: number}
-          - {label: Unit, name: unit, widget: select, options: ['kg', 'pound', 'stone'], default: 'kg'}
-
-      - label: Price
-        name: price
-        widget: object
-        fields:
-          - {label: Amount, name: amount, widget: number}
-          - {label: Currency, name: currency, widget: select, options: ['€', '$', '£'], default: '€'}
-
+      - {label: Weight, name: weight, widget: number}
+      - {label: Price, name: price, widget: number}
       - {label: Body, name: body, widget: markdown}
 
 #markdown middleman blog example
@@ -72,14 +60,29 @@ collections:
   - name: settings
     label: Settings
     files:
-      - file: data/settings/navigation.yml
-        label: Navigation
-        name: navigation
+      - file: data/settings/site.yml
+        label: Site settings
+        name: site_settings
         fields:
-          - label: Navigation items
-            name: nav_items
+          - label: Navigation
+            name: navigation
             widget: list
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
 
+          - label: Units
+            name: units
+            widget: object
+            fields:
+              - label: Currency
+                name: currency
+                widget: select
+                options: ['€', '$', '£']
+                default: '€'
+
+              - label: Weight
+                name: weight
+                widget: select
+                options: ['kg', ' st', ' lb']
+                default: 'kg'

@@ -1,20 +1,20 @@
-.news-item
+article.news-item
   .row
     .image
-      - if post.data.image
-        = link_to post
-          = image_tag post.data.image
+      - if article.data.image
+        = link_to article
+          = image_tag article.data.image
 
           .date
-            //make sure the post date is actually a date
-            - date = Date.parse post.data.date.to_s
+            //make sure the article date is actually a date
+            - date = Date.parse article.data.date.to_s
             span = date.strftime("%d-%m-%Y")
 
     .content
       .wrapper
-        = link_to post
-          h3 = post.data.title
+        = link_to article
+          h3 = article.data.title
         
-        p = post.data.description
+        p = article.data.description
 
-        = link_to 'Read the story', post, class: 'cta'
+        = link_to 'Read the story', article, class: 'cta'

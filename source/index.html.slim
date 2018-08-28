@@ -2,7 +2,35 @@
 title: Kaldi - Middleman + Netlify CMS Example
 ---
 
-= partial 'partials/homepage/hero'
-= partial 'partials/homepage/story'
-= partial 'partials/homepage/products'
-= partial 'partials/homepage/news'
+section.hero style=background_image(image_path(data.pages.home.hero.image))
+  .caption
+    .row
+      h1 = data.pages.home.hero.title
+
+section.homepage-story
+  .container
+    .row
+      .story-content
+        markdown:
+          #{data.pages.home.story}
+
+section.homepage-products.products
+  .container
+    h2
+      | Products
+    .row
+      //product is structured: ['filename', 'data']
+      //sort by newest product
+      - data.products.sort {|a,b| b[1].date <=> a[1].date}.first(3).each do | product |
+
+        //to get the actual data:
+        = partial 'partials/products/product', locals: {product: product[1]}
+
+section.homepage-news.news
+  .container
+    h2
+      | News
+    .news-items
+      //get the first two most recent posts
+      - blog.articles.first(2).each do | article |
+        = partial 'partials/news/news_item', locals: {article: article}

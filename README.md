@@ -27,13 +27,6 @@ $ cd [REPO_NAME]
 $ bundle install
 $ middleman server
 ```
-## Getting Started (Without Netlify)
-```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/tomrutgers/middleman-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ bundle install
-$ middleman server
-```
 
 ### Setting up the CMS
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.

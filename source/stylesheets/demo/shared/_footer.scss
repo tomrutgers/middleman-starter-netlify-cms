@@ -1,0 +1,111 @@
+footer {
+  position: relative;
+  background-color: $text-color;
+
+  .header-primary {
+    position: relative;
+    height: auto;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+    .navigation {
+      background-color: transparent;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .footer-content {
+    padding: 30px 15px 60px;
+  }
+
+  .newsletter {
+    @extend %column;
+    @extend %col-md-6;
+    @extend %col-sm-8;
+  }
+
+  .social {
+    @extend %column;
+    @extend %col-md-6;
+    @include clearfix;
+    margin-top: 40px;
+    .icons {
+      float: right;
+    }
+    a {
+      display: inline-block;
+      text-align: right;
+      margin-left: 15px;
+      width: 60px; 
+      height: 60px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 50%
+
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    
+  }
+  button, input {
+    display: inline-block;
+    padding: 15px;
+    border: none;
+    height: 60px;
+    line-height: 1.5
+  }
+  input {
+    width: 80%;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 4px 0 0 4px;
+  }
+
+  button {
+    width: 20%;
+    background: $primary-color;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+  
+@media screen and (max-width: $screen-xs-max) {
+  footer {
+    .header-primary {
+
+      .navigation {
+        display: block;
+        position: relative;
+        top: auto;
+        border-top: 2px solid rgba(255, 255, 255, 0.1)
+      }
+    }
+    input {
+      width: 60%;
+    }
+    button: 40%;
+
+    .social {
+      margin-top: 30px;
+      .icons {
+        float: none;
+      }
+      a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+  }
+}

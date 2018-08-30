@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    = partial 'layouts/meta'
+    = stylesheet_link_tag "all"
+
+  body
+    = partial 'partials/shared/header-primary'
+
+    main.main-content
+
+      = yield
+
+    = javascript_include_tag 'main', async: true

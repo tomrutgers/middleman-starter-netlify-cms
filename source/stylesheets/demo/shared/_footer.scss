@@ -60,9 +60,10 @@ footer {
   }
   button, input {
     display: inline-block;
+    height: 60px;
     padding: 15px;
     border: none;
-    height: 60px;
+    font-size: 18px;
     line-height: 1.5
   }
   input {
@@ -77,6 +78,7 @@ footer {
     background: $primary-color;
     color: #fff;
     border-radius: 0 4px 4px 0;
+    font-weight: 700;
   }
 }
 

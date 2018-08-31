@@ -10,7 +10,7 @@ This repo contains an **[example website](https://middleman-netlify-cms.netlify.
 
 **Netlify CMS** is a CMS for static site generators. Give non-technical users a simple way to edit and add content to any site built with a static site generator. 
 
-## Getting Started (Recommended)
+## Getting Started
 
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. Use the deploy button below to copy the repository to your account.
 

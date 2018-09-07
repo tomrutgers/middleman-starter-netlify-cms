@@ -1,5 +1,3 @@
 /tmp/
 /build/
 .sass-cache/
-# Used by dotenv library to load environment variables.
-# .env

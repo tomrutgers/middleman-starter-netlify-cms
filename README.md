@@ -1,6 +1,6 @@
 # Middleman + Netlify CMS Starter
 
-This repo contains an **[example website](https://middleman-netlify-cms.netlify.com/)** that is built with [Middleman](https://www.middlemanapp.com/), and [Netlify CMS](https://www.netlifycms.org). 
+This repo contains an **[example website](https://middleman-netlify-cms.netlify.com/)** that is built with [Middleman](https://www.middlemanapp.com/) and [Netlify CMS](https://www.netlifycms.org). 
 
 *Designed and developed by [Tom Rutgers](https://www.tomrutgers.nl/)*
 
@@ -20,7 +20,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 ### Make it work on your machine
 
-Be sure to checkout the [middleman installation guide](https://middlemanapp.com/basics/install/) 
+Be sure to check out the [middleman installation guide](https://middlemanapp.com/basics/install/) 
 ```
 $ git clone https://github.com//tomrutgers/middleman-starter-netlify-cms
 $ cd middleman-starter-netlify-cms

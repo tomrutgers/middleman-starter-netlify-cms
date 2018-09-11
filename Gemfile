@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
+gem 'middleman', '~> 4.2.1'
 gem "middleman-blog"
 gem 'middleman-autoprefixer'
 gem "middleman-livereload"

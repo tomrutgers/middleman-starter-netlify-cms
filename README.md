@@ -22,7 +22,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 Be sure to check out the [middleman installation guide](https://middlemanapp.com/basics/install/) 
 ```
-$ git clone https://github.com//tomrutgers/middleman-starter-netlify-cms
+$ git clone https://github.com/tomrutgers/middleman-starter-netlify-cms
 $ cd middleman-starter-netlify-cms
 $ bundle install
 $ middleman server

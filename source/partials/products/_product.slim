@@ -9,8 +9,8 @@
       .price
         p 
           - currency = data.settings.units.currency || '€' 
-          = currency + product.price 
+          = currency + product.price.to_s 
       .weight
         p 
           - weight = data.settings.units.weight || 'kg'
-          = product.weight + weight
+          = product.weight.to_s + weight

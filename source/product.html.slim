@@ -6,11 +6,11 @@
 
       .weight
         - weight = data.settings.units.weight || 'kg'
-        span = product.weight + weight
+        span = product.weight.to_s + weight
 
       .price
         - currency = data.settings.units.currency || '€' 
-        span = currency + product.price 
+        span = currency + product.price.to_s 
 
     .body
       = markdown product.body

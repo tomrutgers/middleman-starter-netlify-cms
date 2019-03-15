@@ -1,1 +1,3 @@
-"bundler": { "enabled": true }
+{
+  "bundler": { "enabled": true }
+}

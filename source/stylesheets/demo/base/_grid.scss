@@ -1,0 +1,462 @@
+.container {
+  @extend %container;
+}
+
+.container-fluid {
+  @extend %container-fluid;
+}
+
+.row {
+  @extend %row;
+}
+
+%container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+
+  @media (min-width: 1420px) {
+    width: 1360px;
+  }
+}
+
+%container-fluid {
+  @include container-fixed;
+}
+
+%container-fluid-0 {
+  @include container-fixed(0px);
+}
+
+%container-fluid-2 {
+  @include container-fixed(2px);
+}
+
+%container-fluid-8 {
+  @include container-fixed(8px);
+}
+
+%container-fluid-16 {
+  @include container-fixed(16px);
+}
+
+//base rows
+%row {
+  @include make-row;
+}
+
+%row-0 {
+  @include make-row(0px);
+}
+
+%row-2 {
+  @include make-row(4px);
+}
+
+%row-8 {
+  @include make-row(16px);
+}
+
+//base column
+%column {
+  @include make-column(30px);
+}
+
+%column-0 {
+  @include make-column(0);
+}
+
+%column-2 {
+  @include make-column(2px);
+}
+
+%column-8 {
+  @include make-column(8px);
+}
+
+%column-16 {
+  @include make-column(16px);
+}
+
+%col-xs-12 {
+  @include make-xs-column(12);
+}
+
+%col-xs-11 {
+  @include make-xs-column(11, left);
+}
+
+%col-xs-10 {
+  @include make-xs-column(10, left);
+}
+
+%col-xs-9 {
+  @include make-xs-column(9, left);
+}
+
+%col-xs-8 {
+  @include make-xs-column(8, left);
+}
+
+%col-xs-7 {
+  @include make-xs-column(7, left);
+}
+
+%col-xs-6 {
+  @include make-xs-column(6, left);
+}
+
+%col-xs-5 {
+  @include make-xs-column(5, left);
+}
+
+%col-xs-4 {
+  @include make-xs-column(4, left);
+}
+
+%col-xs-3 {
+  @include make-xs-column(3, left);
+}
+
+%col-xs-2 {
+  @include make-xs-column(2, left);
+}
+
+%col-xs-1 {
+  @include make-xs-column(1, left);
+}
+
+//xs offset
+%col-xs-offset-11 {
+  @include make-xs-column-offset(11);
+}
+
+%col-xs-offset-10 {
+  @include make-xs-column-offset(10);
+}
+
+%col-xs-offset-9 {
+  @include make-xs-column-offset(9);
+}
+
+%col-xs-offset-8 {
+  @include make-xs-column-offset(8);
+}
+
+%col-xs-offset-7 {
+  @include make-xs-column-offset(7);
+}
+
+%col-xs-offset-6 {
+  @include make-xs-column-offset(6);
+}
+
+%col-xs-offset-5 {
+  @include make-xs-column-offset(5);
+}
+
+%col-xs-offset-4 {
+  @include make-xs-column-offset(4);
+}
+
+%col-xs-offset-3 {
+  @include make-xs-column-offset(3);
+}
+
+%col-xs-offset-2 {
+  @include make-xs-column-offset(2);
+}
+
+%col-xs-offset-1 {
+  @include make-xs-column-offset(1);
+}
+
+//sm-column
+%col-sm-12 {
+  @include make-sm-column(12);
+}
+
+%col-sm-11 {
+  @include make-sm-column(11);
+}
+
+%col-sm-10 {
+  @include make-sm-column(10);
+}
+
+%col-sm-9 {
+  @include make-sm-column(9);
+}
+
+%col-sm-8 {
+  @include make-sm-column(8);
+}
+
+%col-sm-7 {
+  @include make-sm-column(7);
+}
+
+%col-sm-6 {
+  @include make-sm-column(6);
+}
+
+%col-sm-5 {
+  @include make-sm-column(5);
+}
+
+%col-sm-4 {
+  @include make-sm-column(4);
+}
+
+%col-sm-3 {
+  @include make-sm-column(3);
+}
+
+%col-sm-2 {
+  @include make-sm-column(2);
+}
+
+%col-sm-1 {
+  @include make-sm-column(1);
+}
+
+%col-sm-offset-11 {
+  @include make-sm-column-offset(11);
+}
+
+%col-sm-offset-10 {
+  @include make-sm-column-offset(10);
+}
+
+%col-sm-offset-9 {
+  @include make-sm-column-offset(9);
+}
+
+%col-sm-offset-8 {
+  @include make-sm-column-offset(8);
+}
+
+%col-sm-offset-7 {
+  @include make-sm-column-offset(7);
+}
+
+%col-sm-offset-6 {
+  @include make-sm-column-offset(6);
+}
+
+%col-sm-offset-5 {
+  @include make-sm-column-offset(5);
+}
+
+%col-sm-offset-4 {
+  @include make-sm-column-offset(4);
+}
+
+%col-sm-offset-3 {
+  @include make-sm-column-offset(3);
+}
+
+%col-sm-offset-2 {
+  @include make-sm-column-offset(2);
+}
+
+%col-sm-offset-1 {
+  @include make-sm-column-offset(1);
+}
+
+//md columns
+%col-md-12 {
+  @include make-md-column(12);
+}
+
+%col-md-11 {
+  @include make-md-column(11);
+}
+
+%col-md-10 {
+  @include make-md-column(10);
+}
+
+%col-md-9 {
+  @include make-md-column(9);
+}
+
+%col-md-8 {
+  @include make-md-column(8);
+}
+
+%col-md-7 {
+  @include make-md-column(7);
+}
+
+%col-md-6 {
+  @include make-md-column(6);
+}
+
+%col-md-5 {
+  @include make-md-column(5);
+}
+
+%col-md-4 {
+  @include make-md-column(4);
+}
+
+%col-md-3 {
+  @include make-md-column(3);
+}
+
+%col-md-2 {
+  @include make-md-column(2);
+}
+
+%col-md-1 {
+  @include make-md-column(1);
+}
+
+//md columns-offset
+%col-md-offset-11 {
+  @include make-md-column-offset(11);
+}
+
+%col-md-offset-10 {
+  @include make-md-column-offset(10);
+}
+
+%col-md-offset-9 {
+  @include make-md-column-offset(9);
+}
+
+%col-md-offset-8 {
+  @include make-md-column-offset(8);
+}
+
+%col-md-offset-7 {
+  @include make-md-column-offset(7);
+}
+
+%col-md-offset-6 {
+  @include make-md-column-offset(6);
+}
+
+%col-md-offset-5 {
+  @include make-md-column-offset(5);
+}
+
+%col-md-offset-4 {
+  @include make-md-column-offset(4);
+}
+
+%col-md-offset-3 {
+  @include make-md-column-offset(3);
+}
+
+%col-md-offset-2 {
+  @include make-md-column-offset(2);
+}
+
+%col-md-offset-1 {
+  @include make-md-column-offset(1);
+}
+
+//lg columns
+%col-lg-12 {
+  @include make-lg-column(12);
+}
+
+%col-lg-11 {
+  @include make-lg-column(11);
+}
+
+%col-lg-10 {
+  @include make-lg-column(10);
+}
+
+%col-lg-9 {
+  @include make-lg-column(9);
+}
+
+%col-lg-8 {
+  @include make-lg-column(8);
+}
+
+%col-lg-7 {
+  @include make-lg-column(7);
+}
+
+%col-lg-6 {
+  @include make-lg-column(6);
+}
+
+%col-lg-5 {
+  @include make-lg-column(5);
+}
+
+%col-lg-4 {
+  @include make-lg-column(4);
+}
+
+%col-lg-3 {
+  @include make-lg-column(3);
+}
+
+%col-lg-2 {
+  @include make-lg-column(2);
+}
+
+%col-lg-1 {
+  @include make-lg-column(1);
+}
+
+%col-lg-offset-11 {
+  @include make-lg-column-offset(11);
+}
+
+%col-lg-offset-10 {
+  @include make-lg-column-offset(10);
+}
+
+%col-lg-offset-9 {
+  @include make-lg-column-offset(9);
+}
+
+%col-lg-offset-8 {
+  @include make-lg-column-offset(8);
+}
+
+%col-lg-offset-7 {
+  @include make-lg-column-offset(7);
+}
+
+%col-lg-offset-6 {
+  @include make-lg-column-offset(6);
+}
+
+%col-lg-offset-5 {
+  @include make-lg-column-offset(5);
+}
+
+%col-lg-offset-4 {
+  @include make-lg-column-offset(4);
+}
+
+%col-lg-offset-3 {
+  @include make-lg-column-offset(3);
+}
+
+%col-lg-offset-2 {
+  @include make-lg-column-offset(2);
+}
+
+%col-lg-offset-1 {
+  @include make-lg-column-offset(1);
+}

@@ -1,5 +1,4 @@
 #Bootstrap is used to style bits of the demo. Remove it from the config, gemfile and stylesheets to stop using bootstrap
-require 'bootstrap-sass'
 require "uglifier"
 
 # Activate and configure extensions

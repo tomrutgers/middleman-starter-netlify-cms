@@ -1,11 +1,15 @@
 //setup
 @charset 'utf-8';
-@import 'bootstrap-sprockets';
-@import 'bootstrap-setup';
+
+//bootstrap stuff
+@import 'demo/base/variables';
+@import 'demo/base/mixins';
+@import 'demo/base/normalize';
+@import 'demo/base/scaffolding';
+@import 'demo/base/type';
 
 @import 'demo/base/colors';
 @import 'demo/base/typography';
-@import 'demo/base/mixins';
 @import 'demo/base/grid';
 @import 'demo/base/placeholders';
 

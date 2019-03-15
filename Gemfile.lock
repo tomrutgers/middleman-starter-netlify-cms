@@ -11,8 +11,6 @@ GEM
     autoprefixer-rails (9.4.7)
       execjs
     backports (3.11.4)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -101,11 +99,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    sass (3.7.3)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
@@ -126,7 +119,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (= 3.2.0.2)
   middleman (~> 4.3.2)
   middleman-autoprefixer
   middleman-blog
@@ -136,4 +128,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

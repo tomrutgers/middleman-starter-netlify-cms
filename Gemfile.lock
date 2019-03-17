@@ -119,7 +119,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (~> 4.3.2)
+  middleman
   middleman-autoprefixer
   middleman-blog
   middleman-livereload

@@ -1,32 +1,16 @@
-doctype html
-html
-  head
-    = partial 'layouts/meta'
+= wrap_layout :layout
+  .news-detail
+    .container
+      .row
+        .title
+          - date = Date.parse current_page.data.date.to_s
+          span.date = date.strftime("%d-%m-%Y")
+          h1 = current_page.data.title
 
-    = stylesheet_link_tag "all"
-    // Include netlify identity widget for user registration
-    script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" 
+      .row
+        .image
+          = image_tag current_page.data.image
 
-  body
-    = partial 'partials/shared/header-primary'
+      .row.content
+        = yield
 
-    main.main-content
-      .news-detail
-        .container
-          .row
-            .title
-              - date = Date.parse current_page.data.date.to_s
-              span.date = date.strftime("%d-%m-%Y")
-              h1 = current_page.data.title
-
-          .row
-            .image
-              = image_tag current_page.data.image
-
-          .row.content
-
-            = yield
-
-    = partial 'partials/shared/footer'
-
-    = javascript_include_tag 'main', async: true

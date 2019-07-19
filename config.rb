@@ -7,8 +7,7 @@ require "uglifier"
 # Use '#id' and '.classname' as div shortcuts in slim
 # http://slim-lang.com/
 Slim::Engine.set_options shortcut: {
-  '#' => {tag: 'div', attr: 'id'},
-  '.' => {tag: 'div', attr: 'class'}
+  '#' => { tag: 'div', attr: 'id' }, '.' => { tag: 'div', attr: 'class' }
 }
 
 activate :autoprefixer do |prefix|
@@ -39,10 +38,10 @@ end
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 # proxy product.yml files to product.html 
-data.products.each do |product|
+data.products.each do |_filename, product|
   # product is an array: [filename, {data}]
-  proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html", 
-  locals: {product: product[1]}, 
+  proxy "/product/#{product[:title].parameterize}/index.html", "product.html", 
+  locals: {product: product}, 
   layout: 'product-detail',
   ignore: true
 end
@@ -79,7 +78,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript, :ignore => "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
+  activate :minify_javascript, ignore: "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
 
   # Use Gzip
   activate :gzip

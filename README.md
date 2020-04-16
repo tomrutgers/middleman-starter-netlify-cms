@@ -6,6 +6,8 @@ This repo contains an **[example website](https://middleman-netlify-cms.netlify.
 
 *Designed and developed by [Tom Rutgers](https://www.tomrutgers.nl/)*
 
+*If you want to use the external asset pipeline with ES6, Webpack & Babel have a look at [this repository]( https://github.com/tomrutgers/middleman-webpack-netlify-cms).*
+
 ## About the architecture
 
 **Middleman** is a static site generator using all the shortcuts and tools in modern web development. Check out [middlemanapp.com](http://middlemanapp.com/) for detailed tutorials, including a [getting started guide](http://middlemanapp.com/basics/getting-started/).

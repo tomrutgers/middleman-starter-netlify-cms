@@ -24,7 +24,14 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 ### Make it work on your machine
 
-Be sure to check out the [middleman installation guide](https://middlemanapp.com/basics/install/) 
+## Using docker
+```
+$ docker-compose build
+$ docker-compose run --service-ports web middleman server
+```
+
+## Without docker
+Be sure to check out the [middleman installation guide](https://middlemanapp.com/basics/install/)
 ```
 $ git clone https://github.com/tomrutgers/middleman-starter-netlify-cms
 $ cd middleman-starter-netlify-cms

@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - 4567:4567
+      - 35729:35729
+    volumes:
+      - .:/app
+    command: middleman server

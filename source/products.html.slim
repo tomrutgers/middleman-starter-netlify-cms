@@ -5,8 +5,8 @@ section.products
     .row
       //product is structured: ['filename', 'data']
       //sort by newest product
-      - data.products.sort {|a,b| b[1].date <=> a[1].date}.each do | product |
+      - data.products.sort {|(_filename_a, a),(_filename_b, b)| b.date <=> a.date}.each do | (_filename, product) |
 
         //to get the actual data:
-        = partial 'partials/products/product', locals: {product: product[1]}
+        = partial 'partials/products/product', locals: {product: product}
 

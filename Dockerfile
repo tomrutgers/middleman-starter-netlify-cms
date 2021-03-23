@@ -8,6 +8,7 @@ RUN apt update \
 
 WORKDIR /app
 COPY Gemfile Gemfile.lock /app/
+RUN bundle update --bundler
 RUN bundle install
 
 CMD ["middleman", "server"]

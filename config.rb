@@ -66,7 +66,7 @@ helpers do
   end
 
   def markdown(content)
-     Tilt['markdown'].new { content }.render
+     Tilt['markdown'].new(context: @app) { content }.render
   end
 end
 
